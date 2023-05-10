@@ -1,0 +1,23 @@
+#intro{
+    color: rgb(241, 78, 78);
+}
+h1{
+    text-align: center;
+    color: rgb(135, 8, 8);
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: rgb(5, 5, 5);
+  }
+  #animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(112, 218, 248);
+  }
+  h3{
+    background-color: rgb(254, 213, 77);
+  }
