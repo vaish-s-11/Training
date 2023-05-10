@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link rel="stylesheet" type="text/css" href="/CSS/Classes.css">
+
+    <h1>NARUTO SHIPPUDEN</h1>
+    <h2>USED THE CLASS METHOD</h2>
+    <p id="demo"></p>
+    <h2>USED EXTENDS AND SUPER</h3>
+    <p id="demo1"></p>
+    <h2>USED GETTER AND SETTER</h4>
+    <p id="demo2"></p>
+    <h2>USED STATIC METHOD</h4>
+    <p id="demo3"></p>
+
+   
+    <script>
+      class Anime {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+
+        years() {
+          const date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      const Naruto = new Anime("Naruto", 1999);
+      document.getElementById("demo").innerHTML = "Naruto is " + Naruto.years() + " years old anime.";
+//---------------------------------------------------------------------------------------------------------------------------------------//
+      //used extends and super - inheritance
+      class Akatsuki {
+  constructor(team) {
+    this.akatname = team;
+  }
+  present() {
+    return 'There is no such thing as peace in this world - ' + this.akatname;
+  }
+}
+
+class Model extends Akatsuki {
+  constructor(team, mod) {
+    super(team);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + '<br> Time doesnt heal anything it just teaches us how to live with pain - ' + this.model;
+  }
+}
+
+const myPain = new Model("Obito", "Itachi");
+document.getElementById("demo1").innerHTML = myPain.show();
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+// getter and setter-inheritance
+
+class Leaf {
+  constructor(brand) {
+    this.tname = brand;
+  }
+
+  //getter
+  get cnam() {
+    return this.tname;
+  }
+
+  //setter
+  set tnam(x) {
+    this.tname = x;
+  }
+}
+
+const myTeam = new Leaf("TEAM-7");
+
+document.getElementById("demo2").innerHTML = myTeam.cnam;
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+// static method
+
+class Show {
+  constructor(name) {
+    this.name = name;
+  }
+  static hello(x) {
+    return "NARUTO " + x.name;
+  }
+}
+
+const myAnim = new Show("SHIPPUDEN");
+document.getElementById("demo3").innerHTML = Show.hello(myAnim);
+
+//---------------------------------------------------------------------------------------------------------------------------------------//
+
+    </script>
+  </body>
+</html>

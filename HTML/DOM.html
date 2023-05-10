@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="/CSS/DOM.css">
+    <h1>JAVASCRIPT HTML DOM</h1>
+<hr>
+<h3>Dynamic HTML content</h3>
+<p id="date"></p><hr>
+<h3>Finding HTML Element by Id</h3>
+<p id="intro">"NARUTO UZUMAKI"</p>
+<p id="idtag"></p><hr>
+<h3>Finding HTML Elements by Tag Name</h3>
+<p id="tagtag">AKATSUKI</p><hr>
+<!--class-->
+<h3>Finding HTML Elements by Class Name</h3>
+<p class="p1">AKATSUKI!</p>
+<p id="classTag"></p><hr>
+<!----------------------->
+<h3>Finding HTML Elements by CSS Selectors</h3>
+<p id="cssTag"></p>
+
+<script>
+
+//Dynamic HTML content
+
+document.getElementById("date").innerHTML = "Date : " + Date(); 
+
+//------------------------------------------------------------------------------------------------------------------//
+// Finding HTML Element by Id
+
+const idTag = document.getElementById("intro");
+document.getElementById("idtag").innerHTML = 
+'*I am not gonna run away, I never go back on my word! Thats my nindo, my ninja way* -'  + idTag.innerHTML; 
+
+//------------------------------------------------------------------------------------------------------------------//
+
+//Finding HTML Elements by Tag Name
+
+ const tagTag = document.getElementsByTagName("p");
+ document.getElementById("tagtag").innerHTML = '“Somebody told me I’m a failure, I’ll prove them wrong” - ' + tagTag[4].innerHTML;
+
+//------------------------------------------------------------------------------------------------------------------//
+
+//Finding HTML Elements by Class Name
+
+const x = document.getElementsByClassName("p1");
+document.getElementById("classTag").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + x[0].innerHTML;
+
+//------------------------------------------------------------------------------------------------------------------//
+
+// Finding HTML Elements by CSS Selectors
+
+const y = document.querySelectorAll("p.intro");
+document.getElementById("cssTag").innerHTML = 
+'The first paragraph (index 0) with class="intro" is: ' + y[0].innerHTML;
+
+//------------------------------------------------------------------------------------------------------------------//
+
+//JavaScript Form Validation
+
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+//------------------------------------------------------------------------------------------------------------------//
+
+
+//Changing HTML Style
+
+document.getElementById("p1").style.color = "blue";
+document.getElementById("p1").style.fontFamily = "Arial";
+document.getElementById("p1").style.fontSize = "larger";
+
+//------------------------------------------------------------------------------------------------------------------//
+
+function myMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+
+//onmouseover and onmouseout Events
+function mOver(obj) {
+  obj.innerHTML = "KURAMA!"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "NARUTO!"
+}
+ 
+ </script>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+ </form><hr>
+
+<!------------------------------------------------------------------------------------------------------------------>
+
+<!--USING EVENTS-->
+<h3>USING EVENTS ON BUTTON</BUtton> </h3>
+<h2 id="id1">NARUTO SHIPPUDEN!</h2>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button><hr>
+
+<!------------------------------------------------------------------------------------------------------------------>
+<!--Animation Using JavaScript-->
+<h3>Animation Using JavaScript</h3>
+<div id ="container">
+    <div id ="animate"></div>
+</div>
+<p><button onclick="myMove()">Animate!</button></p> <hr>
+<!------------------------------------------------------------------------------------------------------------------>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#faa320;width:120px;height:20px;padding:40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: larger;">
+Mouse Over Me</div>
+
+
+ </body>
+ </html>
