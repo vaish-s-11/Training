@@ -1,7 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        margin: 20px;
+        border: 1px double  rgb(4, 4, 4);
+        border-width:7px!important;
+        padding: 10px;
+      }
+    </style>
+</head>
+<body>
+    <!--JavaScript addEventListener()-->
+
+    <h2 style="background-color: rgb(208, 212, 216);">JavaScript addEventListener()</h2>
+    <p id="date"></p>
+    <p id="pop"></p>
+    <button id="myBtn" style="background-color: rgb(139, 202, 202);">Click Me!</button><br> <br> <hr> 
+    <h3 style="background-color: rgb(250, 94, 94); width: 14%;;">POPUP WINDOW!</h3>
+    <button id="myBttn" style="background-color: rgb(244, 230, 125);">ANIMATE!</button><br> <br> <hr> 
+    
+    <!--Navigating Between Nodes-->
+    
+   <h2 style="background-color: rgb(208, 212, 216);">Navigating Between Nodes</h2>
+   <h2 id="id01" style="color: rgb(146, 65, 222);">"I Hate A Lot Of Things, And I Don't Particularly Like Anything." - <b><i>SASUKE UCHIHA</i></b></h2>
+   <p id="id02"></p><br><hr>
+   
+   <!--The nodeName Property-->
+   
+   <h2 style="background-color: rgb(208, 212, 216);">JavaScript HTML DOM Elements (Nodes)</h2>
+   <h3 style="background-color: rgb(250, 94, 94); width: 11%;;">NODE NAME !</h3>
+   <h1 id="id03" style="color: rgb(163, 7, 7); font-family: cursive;"><u>AKATSUKI!</u></h1>
+   <p id="id04"></p><br><hr>
+   
+   <!--Creating New HTML Elements (Nodes)-->
+   <!--Removing existing elements-->
+   
+   <h3 style="background-color: rgb(250, 94, 94);width:27%">REMOVING EXISTING ELEMENTS!</h3>
+   <p id="p1" style="color: blueviolet; font-size:larger;">"I Used To Always Cry And Give Up. I Made Many Wrong Turns…"</p>
+   <p id="p2" style="color: rgb(236, 129, 6); font-size:larger;">"...Never... Go Back... On My Word… Because... That's... My Ninja Way, Too!" - <i><b>HINATA</b></i></p><br>
+   
+   <button onclick="myFunction()" style="background-color: blueviolet; cursor: pointer; "onmouseover =" this.style.backgroundColor='blueviolet'" onmouseout="this.style.backgroundColor='orange'">Remove Element</button> <br> <br> <hr>
+   
+   <!--JavaScript HTML DOM Collections-->
+   <!--The HTMLCollection Object-->
+   <h2 style="background-color: rgb(208, 212, 216);">JavaScript HTML DOM Collections</h2>
+   <p style="color: rgb(248, 2, 2);"><b>ITACHI UCHIHA!</b></p>
+   <p style="color: rgb(116, 23, 3);"><b>OBITO UCHIHA!</b></p>
+  <p id="find"></p><hr>
+  
+  <!--JavaScript HTML DOM Node Lists-->
+  <!--HTML DOM Node List Length-->
+  
+  <h2 style="background-color: rgb(208, 212, 216);">JavaScript HTML DOM Node Lists</h2>
+  <h3 style="background-color: rgb(250, 94, 94);width:16.5%">NODE LIST LENGTH!</h3>
+  <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;color: rgb(4, 4, 93);"> <b>1.SASUKE UCHIHA!</b></p>
+  <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;color: rgb(255, 185, 7);"> <b>2.NARUTO UZUMAKI!</b></p>
+  <p id="length"></p><hr>
+  
+  <script>
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    
+    document.getElementById("myBtn").addEventListener("click", displayDate);
+    
+    function displayDate() {
+      document.getElementById("date").innerHTML = Date();
+    }
+    document.getElementById("myBttn").addEventListener("click", function() {
+      alert("NARUTO LOVE!");
+    });
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    //Navigating Between Nodes
+    
+    document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML; 
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    //The nodeName Property
+
+    document.getElementById("id04").innerHTML = document.getElementById("id03").nodeName +  " "  + " - (it shows the node name of where the akatsuki is present)";
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    //Removing existing elements 
+    
+    function myFunction() {
+      document.getElementById("p1").remove();
+    }
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    //The HTMLCollection Object
+    
+    const myCollection = document.getElementsByTagName("p");
+    document.getElementById("find").innerHTML = "THE MOMENT PEOPLE COME TO KNOW LOVE, THEY RUN THE RISK OF CARRYING HATE  -  "+ myCollection[7].innerHTML;
+    
+    //----------------------------------------------------------------------------------------------------------------------------//
+    //HTML DOM Node List Length
+
+   const myNodelist = document.querySelectorAll("p");
+   document.getElementById("length").innerHTML = "SASUKE UCHIHA  AND NARUTO UZUMAKI IN TEAM - " + myNodelist.length;
+   document.getElementById("length").style.color = "blue";
+   
+   </script>
+    
+</body>
+</html>
+
+
+
+
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
