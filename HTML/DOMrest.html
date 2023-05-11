@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,73 +104,6 @@
    const myNodelist = document.querySelectorAll("p");
    document.getElementById("length").innerHTML = "SASUKE UCHIHA  AND NARUTO UZUMAKI IN TEAM - " + myNodelist.length;
    document.getElementById("length").style.color = "blue";
-   
-   </script>
-    
-</body>
-</html>
-
-
-
-
-
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!--JavaScript addEventListener()-->
-
-    <h3 style="background-color: rgb(208, 212, 216);">JavaScript addEventListener()</h3>
-    <p id="date"></p>
-    <p id="pop"></p>
-    <button id="myBtn" style="background-color: rgb(139, 202, 202);">Click Me!</button><br> <br> <hr> <br>
-    <button id="myBttn" style="background-color: rgb(244, 230, 125);">ANIMATE!</button><br> <br> <hr> 
-    
-    <!--Navigating Between Nodes-->
-    
-   <h3 style="background-color: rgb(208, 212, 216);">Navigating Between Nodes</h2>
-   <h2 id="id01">"I Hate A Lot Of Things, And I Don't Particularly Like Anything." - <b>SASUKE UCHIHA</b></h2>
-   <p id="id02" style="color: rgb(146, 65, 222);"></p><br><hr>
-
-   <!--The nodeName Property-->
-
-   <h3 style="background-color: rgb(250, 94, 94);">NODE NAME !</h3>
-   <h1 id="id03">AKATSUKI!</h1>
-   <p id="id04"></p><br><hr>
-
-   <!--Creating New HTML Elements (Nodes)-->
-    <!--Removing existing elemennts-->
-   
-    <p id="p1">This is a paragraph.</p>
-    <p id="p2">This is another paragraph.</p>
-   
-    <button onclick="myFunction()">Remove Element</button>
-
-
-   <script>
-    document.getElementById("myBtn").addEventListener("click", displayDate);
-    
-    function displayDate() {
-      document.getElementById("date").innerHTML = Date();
-    }
-    document.getElementById("myBttn").addEventListener("click", function() {
-  alert("NARUTO LOVE!");
-});
-//----------------------------------------------------------------------------------------------------------------------------//
-
-document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML; 
-
-//----------------------------------------------------------------------------------------------------------------------------//
-
-document.getElementById("id04").innerHTML = document.getElementById("id03").nodeName;
-
-//----------------------------------------------------------------------------------------------------------------------------//
-   
-function myFunction() {
-document.getElementById("p1").remove();
-}
    
    </script>
     
